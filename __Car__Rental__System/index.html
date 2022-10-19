@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="lib/css/styled.css">
+    <link rel="stylesheet" href="lib/css/reset.css">
+    <title>PIMEC CAR RENTAL</title>
+
+</head>
+
+<body>
+    <!--======DarkMode============-->
+    <div class="darkmode">
+        <a onclick="myfunction()" id="darkbut"><i class="ri-moon-fill"></i></a>
+
+    </div>
+
+    <!--make side contact me-->
+    <div id="mysidenavright" class="sidenav">
+        <a href="#" id="fb"><i class="ri-facebook-line"> </i>Share</a>
+        <a href="#" id="ig"><i class="ri-instagram-line"> </i>Share</a>
+        <a href="#" id="twt"><i class="ri-twitter-line"></i>Tweet</a>
+        <a href="#" id="whatsapp"><i class="ri-whatsapp-line"> </i>Share</a>
+        <a href="#" id="linkedIn"><i class="ri-linkedin-line"></i>Share</a>
+
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="ri-arrow-up-s-line"></i></button>
+
+
+    <div class="side-bar">
+        <div class="logo-name-wrapper">
+            <div class="logo-name">
+                <img src="lib/img/pimec car rental.png" class="logo" alt="logo app" srcset="" />
+                <span class="logo-name__name">Pimec</span>
+            </div>
+            <button class="logo-name__button" onclick="myfunction1()">
+                <i class="ri-arrow-left-line logo-name__icon" id="logo-name__icon"></i>
+            </button>
+            <!-- <i class='bx bx-arrow-from-left'></i> -->
+        </div>
+
+
+        <ul class="home-list">
+
+
+            <a class="home-item draft" href="#home">
+
+                <i class="ri-home-line home-item-icon"></i>
+                <span class="home-item-text">Home</span>
+
+                <span class="tooltip">Home</span>
+
+            </a>
+
+            <a class="home-item draft" onclick="openSearch()">
+
+                <i class="ri-search-line home-item-icon"></i>
+                <span class="home-item-text">Search</span>
+
+                <span class="tooltip">Search</span>
+
+            </a>
+
+            <a class="home-item star" href="#explore-cars">
+                <i class="ri-navigation-line home-item-icon"></i>
+                <span class="home-item-text">Explore Cars</span>
+                <span class="tooltip">Explore Cars</span>
+            </a>
+            <a class="home-item sent" onclick="openlogin()">
+                <i class="ri-account-circle-line home-item-icon"></i>
+                <span class="home-item-text">My Account</span>
+                <span class="tooltip">My Account</span>
+            </a>
+            <a class="home-item trash" href="#about">
+                <i class="ri-information-line home-item-icon"></i>
+                <span class="home-item-text">About Us</span>
+                <span class="tooltip">About Us</span>
+            </a>
+            <a class="home-item spam" href="#blogs">
+                <i class="ri-file-list-2-line home-item-icon"></i>
+                <span class="home-item-text">Blogs</span>
+                <span class="tooltip">Blogs</span>
+            </a>
+            <a class="home-item inbox active">
+                <i class="ri-notification-badge-line home-item-icon inbox-icon"><span class="status"></span></i>
+                <span class="home-item-text">Notifications</span>
+                <span class="inbox-number">99</span>
+                <span class="tooltip">Notifications</span>
+            </a>
+
+        </ul>
+        <div class="container2">
+            <!-- Btn-->
+            <button class="btn1"><span>Account Settings</span><i class="material-icons"></i>
+              <ul class="dropdown">
+                <li class="active"><a href="#">Profile Information</a></li>
+                <li><a href="#">Change Password</a></li>
+                <li><a href="#">Become <b>PRO</b></a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Log Out</a></li>
+              </ul>
+            </button>
+          </div>
+    </div>
+    <div id="myOverlay" class="overlay">
+        <span class="closebtn" onclick="closeSearch()" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="ri-search-line"></i></button>
+            </form>
+        </div>
+    </div>
+    <div id="myoverlay-1" class="overlay-1">
+        <span class="closebtn" onclick="closeLogin()" title="Close Overlay">×</span>
+        <div class="overlay-1-content">
+            <div class="main">  	
+                <input type="checkbox" id="chk" aria-hidden="true">
+        
+                    <div class="signup">
+                        <form>
+                            <label for="chk" aria-hidden="true">Sign up</label>
+                            <input class="input1" type="text" name="txt" placeholder="User name" required="">
+                            <input class="input1" type="email" name="email" placeholder="Email" required="">
+                            <input class="input1" type="password" name="pswd" placeholder="Password" required="">
+                            <button class="button1">Sign up</button>
+                        </form>
+                    </div>
+        
+                    <div class="login">
+                        <form>
+                            <label for="chk" aria-hidden="true">Login</label>
+                            <input class="input1" type="email" name="email" placeholder="Email" required="">
+                            <input class="input1" type="password" name="pswd" placeholder="Password" required="">
+                            <button class="button1">Login</button>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="home" style="height:115vh ;">
+
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide">
+
+                    <img src="lib/img/tesla-256x256-202912.png" height="100" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="lib/img/aston-256x256-202943.png" height="100" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="lib/img/bmw-256x256-202750.png" height="100" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="lib/img/ferrari-256x256-202760.png" height="100" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="lib/img/mercedes-256x256-202855.png" height="100" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="lib/img/alfa-256x256-202944.png" height="100" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="lib/img/ford-256x256-202767.png" height="100" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="lib/img/porsche-256x256-202887.png" height="100" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="lib/img/toyota-256x256-202914.png" height="100" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="lib/img/aston-256x256-202943.png" height="100" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="lib/img/volvo-256x256-202923.png" height="100" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="lib/img/volvo-256x256-202923.png" height="100" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="lib/img/bmw-256x256-202750.png" height="100" width="100" alt="" />
+                </div>
+                <div class="slide">
+                    <img src="lib/img/chevrolet-256x256-202731.png" height="100" width="100" alt="" />
+                </div>
+            </div>
+        </div>
+
+
+        <svg class="specialtext" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 750 400"
+            preserveAspectRatio="xMidYMid meet" style="height: 70%; width: 70%">
+            <defs>
+                <filter id="texteffect">
+                    <feGaussianBlur in="SourceGraphic" stdDeviation="4"></feGaussianBlur>
+                    <feComponentTransfer>
+                        <feFuncA type="linear" slope="1.5" intercept="0"></feFuncA>
+                    </feComponentTransfer>
+                    <feComposite result="outer" in2="SourceGraphic" operator="out"></feComposite>
+                    <feGaussianBlur result="pre-inner" in="SourceGraphic" stdDeviation="2"></feGaussianBlur>
+                    <feComposite in="SourceGraphic" in2="pre-inner" operator="out"></feComposite>
+                    <feComponentTransfer result="inner">
+                        <feFuncA type="linear" slope="7.5" intercept="0"></feFuncA>
+                    </feComponentTransfer>
+                    <feMerge>
+                        <feMergeNode in="outer"></feMergeNode>
+                        <feMergeNode in="inner"></feMergeNode>
+                    </feMerge>
+                    <feGaussianBlur stdDeviation="1"></feGaussianBlur>
+                </filter>
+                <linearGradient id="gradient" color-interpolation="sRGB" spreadMethod="repeat" x1="0" x2="0.5" y1="0.02"
+                    y2="0">
+                    <stop stop-color="#ef50d5" offset="0%"></stop>
+                    <stop stop-color="#15f0f2" offset="33%"></stop>
+                    <stop stop-color="#f2a415" offset="66%"></stop>
+                    <stop stop-color="#ef50d5" offset="100%"></stop>
+                </linearGradient>
+                <mask id="textMask">
+                    <g filter="url(#texteffect)">
+                        <rect x="155" y="20" width="445" height="10" fill="#fff"></rect>
+                        <rect x="155" y="170" width="445" height="10" fill="#fff"></rect>
+                        <text id="text" x="375" y="150" text-anchor="middle" fill="#fff">PIMEC</text>
+                    </g>
+                </mask>
+            </defs>
+            <rect id="fill" mask="url(#textMask)" fill="url(#gradient)" x="0" y="0" width="4000" height="200">
+            </rect>
+        </svg>
+        <div class="car-slideshow">
+            <div id="slider">
+                <figure>
+                    <img src="lib/img/pexels-mike-b-120049 (1).jpg" alt="Image" style="height: 100vh;">
+                    <img src="lib/img/pexels-pavlo-luchkovski-337909.jpg" alt="Image" style="height: 100vh;">
+                    <img src="lib/img/pexels-mike-b-116675.jpg" alt="Image" style="height: 100vh;">
+                    <img src="lib/img/pexels-sarmad-mughal-305070.jpg" alt="Image" style="height: 100vh;">
+                    <img src="lib/img/pexels-alexgtacar-1592384.jpg" alt="Image" style="height: 100vh;">
+
+                </figure>
+                <div class="indicator"></div>
+            </div>
+        </div>
+    </section>
+    <section id="explore-cars" style="height: 100vh">
+
+        <div class="row">
+            <div class="car-container">
+                <div class="column">
+                    <div class="car-details">
+                        <img src="lib/img/2023-audi-rs-q8.jpg" alt="" style="width:100%">
+                        <div class="car_name">
+                            <h1>Audi Rs Q8</h1>
+                        </div>
+                        <span class="car_data">
+
+
+                            <h1><i class="ri-rocket-line"></i> 591 Hp @6000rpm</h1>
+                            <h1><i class="ri-cpu-line"></i> Twin-Turbo V8</h1>
+                            <h1><i class="ri-dashboard-2-line"></i> 250Kmph</h1>
+
+                            <h1><i class="ri-team-fill"></i> 5 passengers</h1>
+                            <h1 class="car_price"><i class="ri-money-dollar-circle-line"></i>500/month</h1>
+                            <ul id="drawer">
+                                <li>
+                                    <span class="review">HIGHS</span>
+                                    <div> Blindingly quick yet quiet and smooth, Lamborghini performance for a lot less.
+                                    </div>
+                                </li>
+                                <li><span class="review">LOWS</span>
+                                    <div>Exhaust note could be more exciting, the RS6 Avant wagon also exists.</div>
+                                </li>
+                                <li><span class="review">VERDICT</span>
+                                    <div>The RS Q8 is exactly as fast, luxurious, and ridiculous as you’d expect a
+                                        591-horsepower SUV with a six-figure price tag to be.</div>
+                                </li>
+                                <li><span class="review">RATINGS</span>
+                                    <div>9/10</div>
+                                </li>
+
+                            </ul>
+
+
+                            <div class="container">
+                                <div class="center">
+                                    <button class="btn">
+                                        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                                        </svg>
+                                        <span>RENT</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="column">
+                    <div class="car-details">
+                        <img src="lib/img/mercedes_benz_gls600.jpg" alt="" style="width:100%">
+                        <div class="car_name">
+                            <h1>Mercedes Benz GlS 600 4MATIC</h1>
+                        </div>
+                        <span class="car_data">
+
+
+                            <h1><i class="ri-rocket-line"></i> 550 Hp @6000rpm</h1>
+                            <h1><i class="ri-cpu-line"></i> Twin-Turbo V8</h1>
+                            <h1><i class="ri-dashboard-2-line"></i> 250Kmph</h1>
+
+                            <h1><i class="ri-team-fill"></i> 5 passengers</h1>
+                            <h1 class="car_price"><i class="ri-money-dollar-circle-line"></i>600/month</h1>
+                            <ul id="drawer">
+                                <li>
+                                    <span class="review">HIGHS</span>
+                                    <div>The exterior of the new Mercedes-Maybach GLS is characterized by distinctive
+                                        elements such as the imposing Maybach specific grille with the Upright
+                                        Mercedes-Benz Star, the large panoramic roof and the Maybach exclusive and
+                                        enormous 23-inch (58.4 cm) optional Alloy Wheels. The Mercedes-Maybach GLS
+                                        immediately reveals its true greatness and grandeur.</div>
+                                </li>
+                                <li><span class="review">LOWS</span>
+                                    <div> The absence of electronic adaptive air suspension disappoints which makes the
+                                        ride over uneven roads a bit rough</div>
+                                </li>
+                                <li><span class="review">VERDICT</span>
+                                    <div>Travel in as much comfort as on a private jet. Your Car is equipped with two
+                                        full-fledged individuals seats in place of the continuos bench seat and offers
+                                        easy access to the MBUX rear tablet integrated into the center console. It is
+                                        the best you can pay with such great amount of funds. </div>
+                                </li>
+                                <li><span class="review">RATINGS</span>
+                                    <div>9.5/10</div>
+                                </li>
+                            </ul>
+                            <div class="container">
+                                <div class="center">
+                                    <button class="btn">
+                                        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                                        </svg>
+                                        <span>RENT</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="car-details">
+                        <img src="lib/img/2023-bmw-x6.jpg" alt="" style="width:100%">
+                        <div class="car_name">
+                            <h1>Bmw X6 xDrive40i</h1>
+                        </div>
+                        <span class="car_data">
+
+
+                            <h1><i class="ri-rocket-line"></i> 550 Hp @6000rpm</h1>
+                            <h1><i class="ri-cpu-line"></i> Twin-Turbo V8</h1>
+                            <h1><i class="ri-dashboard-2-line"></i> 250Kmph</h1>
+
+                            <h1><i class="ri-team-fill"></i> 5 passengers</h1>
+                            <h1 class="car_price"><i class="ri-money-dollar-circle-line"></i>600/month</h1>
+                            <ul id="drawer">
+                                <li>
+                                    <span class="review">HIGHS</span>
+                                    <div>Road manners, posh interior, impressive standard equipment.</div>
+                                </li>
+                                <li><span class="review">LOWS</span>
+                                    <div>X6 is more affordable and practical, M50i requires a major price leap,
+                                        labyrinthine infotainment menus.
+                                    </div>
+                                </li>
+                                <li><span class="review">VERDICT</span>
+                                    <div>Although the X6 is a taste of fashion over function, its smooth power and smart
+                                        interior ease the burden of beauty.</div>
+                                </li>
+                                <li><span class="review">RATINGS</span>
+                                    <div>9.5/10</div>
+                                </li>
+                            </ul>
+                            <div class="container">
+                                <div class="center">
+                                    <button class="btn">
+                                        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                                        </svg>
+                                        <span>RENT</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </span>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="car-container">
+                <div class="column">
+                    <div class="car-details">
+                        <img src="lib/img/astonmartindbx.jpg" alt="" style="width:100%">
+                        <div class="car_name">
+                            <h1>aston martin dbx 707</h1>
+                        </div>
+                        <span class="car_data">
+
+
+                            <h1><i class="ri-rocket-line"></i> 542 Hp @6000rpm</h1>
+                            <h1><i class="ri-cpu-line"></i> Twin-Turbo V8</h1>
+                            <h1><i class="ri-dashboard-2-line"></i> 250Kmph</h1>
+
+                            <h1><i class="ri-team-fill"></i> 5 passengers</h1>
+                            <h1 class="car_price"><i class="ri-money-dollar-circle-line"></i>700/month</h1>
+                            <ul id="drawer">
+                                <li>
+                                    <span class="review">HIGHS</span>
+                                    <div> Gorgeous inside and out, terrific ride and handling traits, more practical
+                                        than Aston sports cars.
+                                    </div>
+                                </li>
+                                <li><span class="review">LOWS</span>
+                                    <div>Regular model gets outrun by rivals, brake pedal feels too soft, lacks some
+                                        common driver assists.</div>
+                                </li>
+                                <li><span class="review">VERDICT</span>
+                                    <div>The DBX SUV is Aston Martin's design and driving ethos in a more practical and
+                                        rugged format.</div>
+                                </li>
+                                <li><span class="review">RATINGS</span>
+                                    <div>9.5/10</div>
+                                </li>
+                            </ul>
+                            <div class="container">
+                                <div class="center">
+                                    <button class="btn">
+                                        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                                        </svg>
+                                        <span>RENT</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="car-details">
+                        <img src="lib/img/porsche cayenne 2022.jpg" alt="" style="width:100%">
+                        <div class="car_name">
+                            <h1>Porsche Cayenne</h1>
+                        </div>
+                        <span class="car_data">
+
+
+                            <h1><i class="ri-rocket-line"></i> 460 Hp @6000rpm</h1>
+                            <h1><i class="ri-cpu-line"></i> Twin-Turbo V8</h1>
+                            <h1><i class="ri-dashboard-2-line"></i> 250Kmph</h1>
+
+                            <h1><i class="ri-team-fill"></i> 5 passengers</h1>
+                            <h1 class="car_price"><i class="ri-money-dollar-circle-line"></i>650/month</h1>
+                            <ul id="drawer">
+                                <li>
+                                    <span class="review">HIGHS</span>
+                                    <div> Zesty powertrains, terrific driving traits for an SUV, rated to tow up to 7700
+                                        pounds.
+                                    </div>
+                                </li>
+                                <li><span class="review">LOWS</span>
+                                    <div>Ride can be overly firm, countless options can get costly, short on small-item
+                                        storage.</div>
+                                </li>
+                                <li><span class="review">VERDICT</span>
+                                    <div>The Cayenne caters to anyone who wants a luxurious SUV that's also a kick to
+                                        drive.
+                                        460Hp twin-turbo V8</div>
+                                </li>
+                                <li><span class="review">RATINGS</span>
+                                    <div>9.5/10</div>
+                                </li>
+                            </ul>
+                            <div class="container">
+                                <div class="center">
+                                    <button class="btn">
+                                        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                                        </svg>
+                                        <span>RENT</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="car-details">
+                        <img src="lib/img/2023 Genesis GV80.jpg" alt="" style="width:100%">
+                        <div class="car_name">
+                            <h1>Genesis GV80</h1>
+                        </div>
+                        <span class="car_data">
+
+
+                            <h1><i class="ri-rocket-line"></i> 375 Hp @6000rpm</h1>
+                            <h1><i class="ri-cpu-line"></i> Twin-Turbo V8</h1>
+                            <h1><i class="ri-dashboard-2-line"></i> 250Kmph</h1>
+
+                            <h1><i class="ri-team-fill"></i> 5 passengers</h1>
+                            <h1 class="car_price"><i class="ri-money-dollar-circle-line"></i>550/month</h1>
+                            <ul id="drawer">
+                                <li>
+                                    <span class="review">HIGHS</span>
+                                    <div>Designer-chic luxury ambiance, well-integrated tech, refined road manners.
+
+                                    </div>
+                                </li>
+                                <li><span class="review">LOWS</span>
+                                    <div>Snug passenger space in optional third row, twin-turbo V-6 adds a lot of coin
+                                        to the bottom line, no hybrid or plug-in hybrid option.
+                                    </div>
+                                </li>
+                                <li><span class="review">VERDICT</span>
+                                    <div>When passers-by ask if the GV80 SUV is a Bentley, you know you’re driving
+                                        something special.</div>
+                                </li>
+                                <li><span class="review">RATINGS</span>
+                                    <div>9.5/10</div>
+                                </li>
+                            </ul>
+                            <div class="container">
+                                <div class="center">
+                                    <button class="btn">
+                                        <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                            <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                                        </svg>
+                                        <span>RENT</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="popular" style="height: 100vh;">
+
+    </section>
+    <section id="blogs" style="height: 100vh;">
+
+        <div class="blog-container">
+            <div class="row">
+                <div class="column">
+                    <div class="blogcol">
+                        <div class="blog-con">
+                            <span>
+                                <input type="text" placeholder="Blog Search...." class="blog_search">
+
+                            </span>
+
+                        </div>
+                        <div class="blog-updates">
+                            <span class="bupdates">
+                                Don't miss any updates on supercars!
+                                <div class="iupdates">
+                                    <input type="text" placeholder="Enter your email for updates" class="input-updates">
+                                    <span><button class="updates-button">SUBMIT</button></span>
+                                </div>
+                                <div class="no-spam">
+                                    don't worry we don't spam
+                                </div>
+
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="blogcol">
+                        <img src="lib/img/pexels-leif-bergerson-9545539.jpg" style="height: 300px; width:300px"
+                            class="img-vin">
+
+                        <div class="blog-car">
+                            Drive your Vintage and ....
+
+                        </div>
+                        <div class="blog-car1">
+                            Vintage car owners can lease their cars with a good price here. <br />You can also rent it
+                            with a reasonable price......
+
+                        </div>
+                        <div>
+                            <a href="" class="readmore">READ MORE <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="blogcol2">
+                        <img src="lib/img/pexels-mike-b-3589586.jpg" class="cooper" style="height: 120px;width:200px">
+                        <span class="cooper-desc">It is a Cooper,...</span>
+                        <br />
+                        <span><a href="" class="readmore1">READ MORE <i class="ri-arrow-right-line"></i></a></span>
+                    </div>
+                    <div class="blogcol3">
+                        <img src="lib/img/pexels-makara-heng-12554294.jpg" class="cooper"
+                            style="height: 150px;width:200px">
+                        <span class="tesla-desc">You also drive electric s......</span>
+                        <br />
+                        <span><a href="" class="readmore2">READ MORE <i class="ri-arrow-right-line"></i></a></span>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="column">
+
+                </div>
+                <div class="column">
+                    <div class="blogcol3">
+                        <img src="lib/img/pexels-yoshi-11191305.jpg" style="height: 200px; width: 200px;">
+                        <span class="gwagon">Where qualit..</span>
+                        <br />
+                        <span><a href="" class="readmore3">READ MORE <i class="ri-arrow-right-line"></i></a></span>
+
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="blogcol3">
+                        <img src="lib/img/urus.jpg" style="height: 170px; width: 200px;">
+                        <span class="gwagon">Make the ultimate choice...</span>
+                        <br />
+                        <span><a href="" class="readmore3">READ MORE <i class="ri-arrow-right-line"></i></a></span>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="about" style="height: 100vh;">
+
+        <div class="follow_us">
+            <div class="follow_details">
+                <span>
+                    Follow Us
+                    <span class="icons">
+                        <i class="ri-instagram-line insta"></i>
+                        <i class="ri-facebook-line facebook"></i>
+                        <i class="ri-twitter-line twitter"></i>
+                        <i class="ri-whatsapp-line whatsapp"></i>
+                    </span>
+                    <input type="text" placeholder="Enter your email to receive updates" class="input_follow">
+
+                    <button type="submit" class="button">SUBMIT</button>
+
+
+                </span>
+
+            </div>
+
+        </div>
+        <div class="services">
+            <div class="row-1">
+                <div class="column-1">
+                    <div class="services-details">
+                        PIMEC WOLRD
+
+                    </div>
+                    <span class="services-details-list">
+                        <li>Why Us</li> </br>
+                        <li>About Us</li></br>
+                        <li>The Team</li></br>
+                        <li>Associates</li></br>
+                        <li>PIMEC Squad</li><br />
+                        <li>Our Showroom</li><br />
+                    </span>
+                </div>
+                <div class="column-1">
+                    <div class="services-details">
+                        GENERAL
+
+                    </div>
+                    <span class="services-details-list">
+                        <li>Sell Car</li> </br>
+                        <li>FAQs</li></br>
+                        <li>Videos</li></br>
+                        <li>Blog</li></br>
+                        <li>Car News</li><br />
+                        <li>Sales Login</li><br />
+                    </span>
+                </div>
+                <div class="column-1">
+                    <div class="services-details">
+                        BRANDS
+
+                    </div>
+                    <span class="services-details-list">
+                        <li>BMW</li> </br>
+                        <li>Mercedes Benz</li></br>
+                        <li>Chevrolet</li></br>
+                        <li>Chrysler</li></br>
+                        <li>Toyota</li><br />
+                        <li>Honda</li><br />
+                        <li>Aston Martin</li><br />
+                        <li>Porsche</li><br />
+                        <li>Audii</li><br />
+
+                    </span>
+                </div>
+                <div class="column-1">
+                    <div class="services-details">
+
+
+                    </div>
+                    <span class="services-details-list">
+                        <li>Land Rover</li> </br>
+                        <li>Range Rover</li></br>
+                        <li>Volvo</li></br>
+                        <li>Ford</li></br>
+                        <li>Lexus</li><br />
+                        <li>Lamborghini</li><br />
+                        <li>Nissan</li><br />
+                        <li>Alpha Romeo</li><br />
+                        <li>Volkswagen</li><br />
+                        <li>Suzuki</li><br />
+
+                    </span>
+                </div>
+                <div class="column-1">
+                    <div class="services-details">
+                        STYLE
+
+                    </div>
+                    <span class="services-details-list">
+                        <li>Sedan</li> </br>
+                        <li>SUV</li></br>
+                        <li>Sports</li></br>
+                        <li>Convertible</li></br>
+                        <li>RVs</li><br />
+                        <li>HatchBack</li><br />
+                        <li>Coupe</li><br />
+                        <li>Offroad</li><br />
+                        <li>Limousines</li><br />
+                    </span>
+                </div>
+            </div>
+            <hr>
+            <div class="row-1">
+                <div class="column-2">
+                    <div class="services-details">
+                        HEADQUATERS
+
+                    </div>
+                    <span class="services-details-list">
+                        Grasmere, Borrowdale<br />
+                        Harare North,<br />
+                        Zimbabwe
+                    </span>
+
+                </div>
+                <div class="column-2">
+                    <div class="services-details">
+                        BRANCHES
+
+                    </div>
+                    <span class="services-details-list">
+                        <img src="lib/img/map.svg" class="map">
+
+                    </span>
+
+                </div>
+                <div class="column-2">
+                    <div class="services-details">
+                        SUPPORT
+
+                    </div>
+                    <span class="services-details-list">
+                        <li>Lease Car</li><br />
+                        <li>Help Center</li><br />
+                        <li>Privacy Policy</li><br />
+                        <li>Terms and Conditions</li><br />
+
+                    </span>
+
+                </div>
+
+
+            </div>
+            <hr>
+            <div class="rights">
+                <div class="right_text">
+                    ©2022 CodeWithTakundanashe. All Rights Reserved
+                </div>
+            </div>
+
+    </section>
+    <script>
+        function openlogin(){
+            document.getElementById("myoverlay-1").style.display="block";
+
+        }
+        function openSearch() {
+            document.getElementById("myOverlay").style.display = "block";
+        }
+         function closeLogin(){
+            document.getElementById("myoverlay-1").style.display="none";
+
+         }
+        function closeSearch() {
+            document.getElementById("myOverlay").style.display = "none";
+        }
+    </script>
+    <script type="text/javascript">
+        {
+            let sideBar = document.querySelector('.side-bar');
+            let arrowCollapse = document.querySelector('#logo-name__icon');
+            sideBar.ondblclick = () => {
+                sideBar.classList.toggle('collapse');
+                arrowCollapse.classList.toggle('collapse');
+                if (arrowCollapse.classList.contains('collapse')) {
+                    arrowCollapse.classList =
+                        'ri-arrow-right-line logo-name__icon collapse';
+         
+                          } else {
+                    arrowCollapse.classList = 'ri-arrow-left-line logo-name__icon';
+                }
+            };
+          
+        }
+    </script>
+    <script>
+       function myfunction1(){
+        let sideBar = document.querySelector('.side-bar');
+        sideBar.classList.toggle('collapse');
+        let arrowCollapse = document.querySelector('#logo-name__icon');
+                   arrowCollapse.classList.toggle('collapse');
+                if (arrowCollapse.classList.contains('collapse')) {
+                    arrowCollapse.classList =
+                        'ri-arrow-right-line logo-name__icon collapse';
+         
+                          } else {
+                    arrowCollapse.classList = 'ri-arrow-left-line logo-name__icon';
+                }
+            }
+
+       
+    </script>
+    <script src="lib/js/main.js"></script>
+  </body>
+
+</html>
